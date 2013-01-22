@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Contacts</title>
+	<link href="css/all.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+    <style type="text/css" media="screen">
+				textarea { resize: none; }
+	</style>
+    
+    <script type="text/javascript" language="javascript">
+ 	function checkForm(thisform)
+		{
+			 if(thisform.name.value=='')
+    		{
+      		alert("Name field is required. Please fill it in.");
+		      return false;
+    		}
+			 if(thisform.Email.value=='')
+    		{
+      		alert("Email field is required. Please fill it in.");
+		      return false;
+    		}
+		    if(thisform.PhoneNumber.value=='')
+    		{
+      		alert("Phone Number field is required. Please fill it in.");
+		      return false;
+    		}
+			if(thisform.Comment.value=='')
+			{
+			alert("Please enter a your comment or query");
+			return false;
+			}
+			var x=document.forms["form1"]["Email"].value;
+			var atpos=x.indexOf("@");
+			var dotpos=x.lastIndexOf(".");
+			if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+  			{
+  				alert("Not a valid e-mail address");
+  				return false;
+  			}
+			
+        thisform.submit();
+  	  }
+   </script>
+</head>
+
+<body>
+	<div id=wrapper>
+		<div id="logo"><a href="index.html"><img src="images/toplogo.jpg" /></a></div>
+	    <div id="image"><img src="images/homestay.jpg" /></div>
+		<div id="homestay">  <img src="images/slider images/contact.jpg" /></div>
+		<div id="hot">    <img src="images/contact.jpg" /></div>
+		<div id="nav">
+    	    <ul>
+        	  <li><a href="index.html">Home</a></li>
+	          <li><a href="stay.html">Stay</a></li>
+    	      <li><a href="nearby.html">Near By</a></li>
+        	  <li><a href="reachus.html">Reach Us</a></li>
+          	  <li><a href="contacts.html">Contacts</a></li>
+        	</ul>
+     </div>
+<div id="map"> 
+				<a href="http://maps.google.co.in/maps?q=Hiregutti+Village&hl=en&ll=14.562328,74.389715&spn=0.00311,0.004823&sll=14.579679,74.338388&sspn=0.046351,0.077162&hnear=Hiregutti,+Uttara+Kannada,+Karnataka&t=h&z=18" target="_blank"> <img src="images/map.jpg" height="149" width="245" /></a><br />
+</div>
+	<div id="packagesheader"><img src="images/ourpackages.jpg" width="351" height="23" alt="our packages" /></div>
+	<div id="packages">
+		<h3 class="golden">Pack Your Bag Now!</h3>
+    	 <div id="para1"><font color="#4D4D4D"><b> House is village type tiled roof house, with all mimimum required mordern facilities, 2 room will be available for 											                       guests with attach bath. It's the govt approved Home Stay, Veg & non-veg food will be served (spl in costal food), The house is in 2 acer plot                       with full of mango trees, and very good view of western ghat from the house, good playing area for children, small pool for childrens, ample                       space for parking, just 50 mts from NH-17</b></font>
+      	</div>
+ 	</div>
+      
+      <div id="specials">
+              <a href="contacts.html"><img src="images/ad_special_offer.gif" width="293" height="79" alt="special offer" /></a>
+      </div>
+      <div id="main">
+      	<div class="inner">
+        
+        	<div id="form">
+            <h3 class="blue1"></h3>
+            </div>
+             <form name="form1" id="form1" method="post" action="contacts.php">
+            <table>
+             <tr><td><h2><font>Name</font></h2></td><td><input name="name" type="text" id="name" /></td></tr>
+             <tr><td><h2><font>Email</font></h2></td><td><input name="Email" type="text" id="Email" /></td></tr>
+      		 <tr><td><h2><font>Phone Number</font></h2></td><td><input name="PhoneNumber" type="text" id="PhoneNumber" /></td></tr>
+             <tr align="left"><td><h2><font>Comment/Enquiry</font></h2></td><td><textarea rows="6" cols="30" id="Comment"></textarea></td></tr>
+             <tr align="left"><td></td><td><input name="Submit" type="button" id="Submit" onclick="checkForm(this.form)" value="Submit" /></td></td></tr>
+            </table>
+            </form>
+           
+   		</div>
+      </div>
+		<div id="address"> <b>     Hanchina Mane Home Stay<br />
+				Hiregutti Village,<br />
+				Kumta Taluk,<br />
+				Uttarkannada Dist.<br />
+				Karnataka</b>
+        </div>
+    <div id="footer1">
+         <div id="copy"><b> &copy; Copyright 2012 </b></div><div id="design"><a href="http://www.kreaytive.com" target="_blank" ><b><font color="#CCCCCC">Website Design                            and Developed By Kreaytive Studios</font> </b></div>
+         </div>
+</div>
+</body>
+</html>
